@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="leak-detect",
-    version="0.0.1",
+    version="0.0.3",
     author="Abhay Pawar",
     author_email="abhayspawar@gmail.com",
-    description="Detect leakages in machine learning datasets using complex numbers and NANs",
+    description="Detect leakage in ML datasets using complex numbers and NANs",
     long_description=(
         "Leak-detect helps with detecting data leakages "
         "in your data creation pipeline using complex numbers and NANs. "
-        "It enables you to test for data leakage with ease and perfect accuracy, "
+        "It enables you to test for data leakage with ease and high accuracy, "
         "while treating your data creation pipeline as a black-box."
     ),
     long_description_content_type="text/markdown",
@@ -24,5 +24,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=["pandas==0.25.3", "numpy==1.17.4", "matplotlib==3.0.2"],
+    install_requires=["pandas", "numpy"],
 )
