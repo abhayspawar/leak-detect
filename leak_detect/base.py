@@ -12,6 +12,7 @@ def get_nan_counts(data, cols, null_col_suffix=''):
 
         Returns: 
             nulls_df (dataframe): contains null counts for columns 'cols' in 'data'.
+
     """
     nulls_df = pd.DataFrame(pd.isnull(data[cols]).sum())
     nulls_df.columns = ['null_counts'+null_col_suffix]
@@ -44,6 +45,7 @@ def detect_vertical_leakage_from_to(data_creation_func, input_data, input_featur
 
             Returns:
                 has_leakage (boolean): True if leakage is happening vertically in given direction. Else false.
+
     """
 
     input_data_feats = data_creation_func(input_data)
@@ -134,6 +136,7 @@ def detect_vertical_leakage(data_creation_func, input_data, input_feature_cols, 
 
         Returns: 
             has_leakage (boolean): True if leakage is happening vertically in given direction. Else false.
+
     """
 
     if direction not in ['upward', 'downward']:
@@ -190,6 +193,7 @@ def detect_horizontal_leakage_from_to(data_creation_func, input_data, leakage_fr
 
         Returns:
             has_leakage (boolean): True if leakage is happening from 'leakage_from_cols' to 'leakage_to_cols'.
+
     """
     
     # checks for leakage from 'from' cols to 'to' cols. Gets called by main horizontal leakage function.
@@ -261,6 +265,7 @@ def detect_horizontal_leakage(data_creation_func, input_data, target_cols, outpu
         Returns:
             has_leakage (boolean): True if leakage is happening from 'target_cols' to 'output_feature_cols' or from
                 'input_feature_cols' to 'target_cols'.
+                
     """
     # Needs the target columns to already present in input data and shouldnt be recreated in data_creation_func
     has_leakage = 0
