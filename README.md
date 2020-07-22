@@ -5,6 +5,9 @@ Detailed [blog post](https://towardsdatascience.com/detecting-data-leakage-in-ml
   
 leak-detect contains two function to detect horizontal and vertical leakage in data creation pipelines.
 
+### Vertical leakage detection
+
+```
 def detect_vertical_leakage(data_creation_func, input_data, input_feature_cols, output_feature_cols, only_nan=False,
                             check_row_number=-1, direction='upward'):
 
@@ -31,8 +34,12 @@ Parameters:
 Returns: 
     has_leakage (boolean): True if leakage is happening vertically in given direction. Else false.
 
+```
 
 
+### Horizontal leakage detection
+
+```
 def detect_horizontal_leakage(data_creation_func, input_data, target_cols, output_feature_cols, input_feature_cols=[], 
                               only_nan=False)
                               
@@ -58,4 +65,4 @@ Parameters:
 Returns:
     has_leakage (boolean): True if leakage is happening from 'target_cols' to 'output_feature_cols' or from
         'input_feature_cols' to 'target_cols'.
-                
+```
