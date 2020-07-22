@@ -5,7 +5,7 @@ Detailed [blog post](https://towardsdatascience.com/detecting-data-leakage-in-ml
   
 leak-detect contains two function to detect horizontal and vertical leakage in data creation pipelines.
 
-detect_horizontal_leakage_from_to(data_creation_func, input_data, leakage_from_cols, leakage_to_cols, 
+`detect_horizontal_leakage_from_to(data_creation_func, input_data, leakage_from_cols, leakage_to_cols, 
                                       use_nan=True)
     Checks if leakage is happening from 'leakage_from_cols' columns to 'leakage_to_cols' columns when they 
     are computed in 'data_creation_func'.
@@ -24,4 +24,4 @@ detect_horizontal_leakage_from_to(data_creation_func, input_data, leakage_from_c
             use_nan (boolean): If NANs should be used. Complex numbers are used if False. Default is True.
 
         Returns:
-            has_leakage (boolean): True if leakage is happening from 'leakage_from_cols' to 'leakage_to_cols'.
+            has_leakage (boolean): True if leakage is happening from 'leakage_from_cols' to 'leakage_to_cols'.`
