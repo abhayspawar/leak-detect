@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="leak-detect",
-    version="0.0.3",
+    version="0.0.1",
     author="Abhay Pawar",
     author_email="abhayspawar@gmail.com",
     description="Detect leakage in ML datasets using complex numbers and NANs",
