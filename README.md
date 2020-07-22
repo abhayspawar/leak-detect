@@ -1,7 +1,7 @@
 # leak-detect
 Leak-detect can be used to detect leakages in machine learning pipelines using complex numbers and NANs.
 
-Detailed [blog post](https://towardsdatascience.com/detecting-data-leakage-in-ml-pipelines-using-nans-and-complex-numbers-66a066116b40) explaining the idea behind this package.
+Detailed [blog post](https://towardsdatascience.com/detecting-data-leakage-in-ml-pipelines-using-nans-and-complex-numbers-66a066116b40) explaining the idea behind this package. The [examples notebook](https://github.com/abhayspawar/leak-detect/blob/master/leak-detect%20example.ipynb) walks through a few examples.
   
 leak-detect contains two function to detect horizontal and vertical leakage in data creation pipelines. Description of input parameters and output for each function below.
 
